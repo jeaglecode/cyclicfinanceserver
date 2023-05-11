@@ -1,10 +1,11 @@
-import cors from "cors";
+
 const express = require('express');
 const fs = require('fs');
 const app = express();
-// const cors = require('cors');
+const cors = require('cors');
 
 app.use(express.json());
+console.log(typeof cors);
 app.use(cors());
 
 app.all('/', (req, res) => {
@@ -36,5 +37,5 @@ function getUsers() {
     return JSON.parse(data);
 }
 
-app.listen(process.env.PORT || 3000);
-console.log(`Server started at PORT ${process.env.PORT || 3000}`);
+// app.listen(process.env.PORT || 3000);
+// console.log(`Server started at PORT ${process.env.PORT || 3000}`);
