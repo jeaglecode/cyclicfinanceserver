@@ -37,5 +37,5 @@ function getUsers() {
     return JSON.parse(data);
 }
 
-// app.listen(process.env.PORT || 3000);
-// console.log(`Server started at PORT ${process.env.PORT || 3000}`);
+app.listen(process.env.PORT || 3000);
+console.log(`Server started at PORT ${process.env.PORT || 3000}`);
