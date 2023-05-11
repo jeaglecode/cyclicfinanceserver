@@ -1,11 +1,11 @@
-// import cors from "cors";
+import cors from "cors";
 const express = require('express');
 const fs = require('fs');
 const app = express();
 // const cors = require('cors');
 
 app.use(express.json());
-// app.use(cors());
+app.use(cors());
 
 app.all('/', (req, res) => {
     console.log('Just got a request!');
